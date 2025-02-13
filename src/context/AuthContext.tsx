@@ -6,15 +6,15 @@ interface AuthContextProps {
   user?: User | null;
   isAuthenticated?: boolean;
   token?: string | null;
-  setUser?: Dispatch<SetStateAction<User | null>>;
-  setToken?: Dispatch<SetStateAction<string | null>>;
+  setUser: Dispatch<SetStateAction<User | null>>;
+  setToken: Dispatch<SetStateAction<string | null>>;
 }
 
 interface AuthContextProviderProps {
   children: ReactNode;
 }
 
-const AuthContext = createContext<AuthContextProps>({ user: null, isAuthenticated: false, token: null });
+const AuthContext = createContext<AuthContextProps>({ user: null, isAuthenticated: false, token: null, setUser: () => {}, setToken: () => {} });
 
 export const useAuthContext = () => {
   const context = useContext<AuthContextProps>(AuthContext);

@@ -5,13 +5,16 @@ import { RouterProvider } from "react-router";
 import "./index.css";
 import router from "./router";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { AuthContextProvider } from "./context/AuthContext";
 
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <AuthContextProvider>
+        <RouterProvider router={router} />
+      </AuthContextProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </StrictMode>

@@ -9,7 +9,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, items }) => {
   return (
-    <div
+    <aside
       className={`fixed top-16 left-0 w-64 bg-gray-800 h-full p-4 transition-all duration-300 ease-in-out z-40 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, items }) => {
             </Link>
           );
         })}
-    </div>
+    </aside>
   );
 };
 

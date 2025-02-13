@@ -1,4 +1,4 @@
-export const validateEmailPattern = (email: string) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+export const validateEmailPattern = (email: string) =>  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
 
 export const upperCase = (word: string) => {
   return word.charAt(0).toUpperCase() + word.slice(1);

@@ -1,7 +1,7 @@
 import { forwardRef, InputHTMLAttributes } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string;
+  name?: string;
   label?: string;
   className?: string;
   error?: string | string[];
